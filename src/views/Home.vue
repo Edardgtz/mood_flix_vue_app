@@ -1,18 +1,32 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Enter Mood</h1>
+    <form>
+      <input type=text v-model="mood" placeholder="Type Mood Here">
+      <br><button type="submit" @click.stop.prevent="submit()">Match Mood</button>
+      <!-- \<button>Lean In</button> -->
+    </form>
   </div>
 </template>
-
+<style>
+</style>
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import axios from "axios";
 
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+  data: function () {
+    return {
+      message: "Welcome to Vue.js!",
+      mood: "",
+    };
+  },
+  created: function () {
+    console.log("in created...");
+  },
+  methods: {
+    submit() {
+      this.$router.push(`/titles/index?mood=${this.mood}`);
+    },
+  },
+};
 </script>
