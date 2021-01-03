@@ -2,8 +2,10 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import TitlesIndex from '../views/TitlesIndex.vue';
+import VueInputAutowidth from 'vue-input-autowidth';
 
-Vue.use(VueRouter)
+Vue.use(VueInputAutowidth);
+Vue.use(VueRouter);
 
 const routes = [
   {

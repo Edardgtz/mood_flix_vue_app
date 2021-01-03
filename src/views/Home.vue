@@ -2,7 +2,11 @@
   <div class="home">
     <h1>Enter Mood</h1>
     <form>
-      <input type=text v-model="mood" placeholder="Type Mood Here">
+      <input class="fix"
+      type="text"
+      v-autowidth="{maxWidth: '960px', minWidth: '20px', comfortZone: 0}" 
+      v-model="user_input" 
+      placeholder="Describe what your in the mood for!">
       <br><button type="submit" @click.stop.prevent="submit()">Match Mood</button>
       <!-- \<button>Lean In</button> -->
     </form>
@@ -17,7 +21,7 @@ export default {
   data: function () {
     return {
       message: "Welcome to Vue.js!",
-      mood: "",
+      user_input: "",
     };
   },
   created: function () {
@@ -25,7 +29,7 @@ export default {
   },
   methods: {
     submit() {
-      this.$router.push(`/titles/index?mood=${this.mood}`);
+      this.$router.push(`/titles/index?user_input=${this.user_input}`);
     },
   },
 };

@@ -10,6 +10,8 @@
 </template>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -24,33 +26,53 @@
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #008cff;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #7cc2fc;
+}
+p {
+  /* font-family: "Montserrat Subrayada", sans-serif; */
+  font-family: "Racing Sans One", cursive;
+  font-size: 25px;
+  font-style: normal;
+  font-variant: small-caps;
+  font-weight: 400;
+  line-height: 23px;
+  color: #bde0fd;
+}
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
 }
 
 body {
-  background-image: url("../src/assets/old_map.png");
+  background-image: url("../src/assets/papyrus-dark.png");
 }
 .card {
   margin: 0 auto; /* Added */
   float: none; /* Added */
   margin-bottom: 10px; /* Added */
 }
+.card-body {
+  background-color: #071111;
+}
 .img {
   width: 100%;
-  height: 30vh;
+  height: 50vh;
   object-fit: contain;
 }
 h1 {
-  font-family: Papyrus, fantasy;
-  font-size: 23px;
+  /* font-family: "Montserrat Subrayada", sans-serif; */
+  font-family: "Racing Sans One", cursive;
+  font-size: 35px;
   font-style: normal;
   font-variant: small-caps;
   font-weight: 400;
   line-height: 23px;
+  color: #008cff;
 }
 h3 {
   font-family: Papyrus, fantasy;
@@ -60,15 +82,16 @@ h3 {
   font-weight: 700;
   line-height: 23px;
 }
-p {
+/* p {
   font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond,
     "Times New Roman", serif;
-  font-size: 14px;
+  font-size: 20px;
   font-style: normal;
   font-variant: normal;
   font-weight: 400;
   line-height: 23px;
-}
+  color: #058dfc;
+} */
 blockquote {
   font-family: Papyrus, fantasy;
   font-size: 17px;

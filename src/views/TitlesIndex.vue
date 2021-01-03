@@ -14,9 +14,9 @@
           </div>
         </div> -->
       <div class="card" style="width: 75%;">
-        <img v-bind:src="title.images" v-bind:alt="title.title" />
+        <img v-bind:src="title.images" v-bind:alt="title.title" class="card-img-top img-fluid">
         <div class="card-body">
-          <h5 class="card-title">{{ title.title }}</h5>
+          <h1 class="card-title">{{ title.title }}</h1>
           <p class="card-title">Rating: {{ title.rating }}<p/>
           <p class="card-title">Plot: {{title.plot}}</p>
           <p class="card-title">Run Time: {{ title.run_time }}</p>
@@ -47,7 +47,7 @@ export default {
       console.log("in Index...");
       console.log(this.$route.query);
       axios
-        .get(`/api/movies?mood=${this.$route.query.mood}`)
+        .get(`/api/movies?user_input=${this.$route.query.user_input}`)
         .then((response) => {
           console.log(response.data);
           this.titles = response.data;
