@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <h1>Enter Mood</h1>
+    <div class="header"><h1 class="title"><font color="yellow">M</font><font color="blue">o</font><font color="green">o</font><font color="red">d</font> <font color="yellow">F</font><font color="blue">l</font><font color="green">i</font><font color=red>x</font></h1></div>
+    <h1 class="font_input">Enter Mood</h1>
     <form>
       <input class="fix"
       type="text"

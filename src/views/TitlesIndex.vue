@@ -1,6 +1,6 @@
 <template>
   <div class="titles-index">
-    <h1>You're Movies</h1>
+    <h1>Your Movies</h1>
       <div v-for="title in titles">
         <!-- <div class="card mb-3">
           <img v-bind:src="title.images" v-bind:alt="title.title" />
@@ -22,7 +22,7 @@
           <p class="card-title">Run Time: {{ title.run_time }}</p>
           <p class="card-title">Release Date: {{ title.year }}</p>
           <p class="card-title">Movie Rating: {{ title.movie_rating }}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
         </div>
       </div>
     </div> 

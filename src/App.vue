@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-       <router-link to="/titles/index">Index</router-link>
+      <router-link to="/">Home</router-link>
     </div>
     <router-view/>
   </div>
@@ -107,5 +105,22 @@ pre {
   font-variant: normal;
   font-weight: 400;
   line-height: 23px;
+}
+.title {
+  font-size: 100px;
+  color: yellow;
+}
+.header {
+  padding: 100px;
+  text-align: center;
+  /* background: #1abc9c; */
+  /* color: white; */
+  font-size: 50px;
+}
+font {
+  font-size: 200px;
+}
+.font_input {
+  font-size: 75px;
 }
 </style>
