@@ -1,14 +1,25 @@
 <template>
   <div class="home">
-    <div class="header"><h1 class="title"><font color="yellow">M</font><font color="blue">o</font><font color="green">o</font><font color="red">d</font> <font color="yellow">F</font><font color="blue">l</font><font color="green">i</font><font color=red>x</font></h1></div>
-    <h1 class="font_input">Enter Mood</h1>
+    <div class="header">
+      <h1 class="title" style="font-family: kust">
+        <font color="black">M</font>
+        <font color="black">o</font>
+        <font color="black">o</font>
+        <font color="black">d</font>
+        <font color="black">F</font>
+        <font color="black">l</font>
+        <font color="black">i</font>
+        <font color="black">x</font>
+      </h1>
+    </div>
+    <h1 class="font_input" style="font-family: kust">Enter Mood</h1>
     <form>
       <input class="fix"
       type="text"
       v-autowidth="{maxWidth: '960px', minWidth: '20px', comfortZone: 0}" 
       v-model="user_input" 
-      placeholder="Describe what your in the mood for!">
-      <br><button type="submit" @click.stop.prevent="submit()">Match Mood</button>
+      placeholder="Describe what you're in the mood for!" style="font-family: kust">
+      <div class="mood_input" style="font-family: kust"><button type="submit" @click.stop.prevent="submit()">Match Mood</button></div>
       <!-- \<button>Lean In</button> -->
     </form>
   </div>

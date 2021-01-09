@@ -10,12 +10,13 @@
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
+/* @import url("assets/fonts/kust.woff"); */
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #223142;
 }
 
 #nav {
@@ -23,22 +24,27 @@
 }
 
 #nav a {
+  font-family: "kust";
   font-weight: bold;
-  color: #008cff;
+  font-size: 50px;
+  color: black;
 }
 
 #nav a.router-link-exact-active {
-  color: #7cc2fc;
+  font-family: "kust";
+  color: black;
+  font-size: 50px;
 }
 p {
   /* font-family: "Montserrat Subrayada", sans-serif; */
   font-family: "Racing Sans One", cursive;
-  font-size: 25px;
+  font-size: 35px;
   font-style: normal;
   font-variant: small-caps;
   font-weight: 400;
-  line-height: 23px;
-  color: #bde0fd;
+  line-height: 35px;
+  color: white;
+  /* background-color: black; */
 }
 .card-img-top {
   width: 100%;
@@ -47,7 +53,13 @@ p {
 }
 
 body {
-  background-image: url("../src/assets/papyrus-dark.png");
+  background-image: url("../src/assets/steve-johnson-5MTf9XyVVgM-unsplash.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+  /* font-family: kust; */
 }
 .card {
   margin: 0 auto; /* Added */
@@ -55,72 +67,125 @@ body {
   margin-bottom: 10px; /* Added */
 }
 .card-body {
-  background-color: #071111;
+  /* background-image: url("../src/assets/steve-johnson-5MTf9XyVVgM-unsplash.jpg"); */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgb(0, 0, 0);
 }
-.img {
-  width: 100%;
-  height: 50vh;
-  object-fit: contain;
+img {
+  /* width: 100%; */
+  /* height: 50vh; */
+  /* object-fit: contain; */
+  padding-bottom: 20px;
 }
 h1 {
   /* font-family: "Montserrat Subrayada", sans-serif; */
+
+  font-family: kust;
+  font-size: 35px;
+  font-style: normal;
+  font-variant: small-caps;
+  font-weight: 400;
+  line-height: 23px;
+  color: white;
+  /* background-color: white; */
+}
+
+.header {
+  /* padding: 100px; */
+  padding-top: 25px;
+  padding-bottom: 30px;
+  text-align: center;
+  /* background: #1abc9c; */
+  color: white;
+  font-size: 50px;
+  /* font-family: kust; */
+}
+font {
+  font-size: 250px;
+}
+.font_input {
+  font-size: 100px;
+  color: black;
+  padding-bottom: 5px;
+}
+
+button {
+  background-color: black;
+  border-block-color: white;
+  padding: 8px;
+  color: white;
+}
+
+input,
+select,
+textarea {
+  background-color: white;
+  color: black;
+}
+
+::placeholder {
+  color: black;
+  font-family: kust;
+}
+form {
+  border: 5px;
+  margin: 10px;
+  padding: 5px;
+}
+.mood_input {
+  margin-top: 30px;
+}
+.index_header {
+  font-size: 150px;
+  color: black;
+}
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  /* height: 80px; */
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+@font-face {
+  font-family: "kust";
+  src: url("assets/fonts/kust.otf") format("opentype");
+}
+
+.card_title {
   font-family: "Racing Sans One", cursive;
   font-size: 35px;
   font-style: normal;
   font-variant: small-caps;
   font-weight: 400;
   line-height: 23px;
-  color: #008cff;
-}
-h3 {
-  font-family: Papyrus, fantasy;
-  font-size: 17px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 700;
-  line-height: 23px;
-}
-/* p {
-  font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond,
-    "Times New Roman", serif;
-  font-size: 20px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  line-height: 23px;
-  color: #058dfc;
-} */
-blockquote {
-  font-family: Papyrus, fantasy;
-  font-size: 17px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  line-height: 23px;
-}
-pre {
-  font-family: Papyrus, fantasy;
-  font-size: 11px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  line-height: 23px;
-}
-.title {
-  font-size: 100px;
-  color: yellow;
-}
-.header {
-  padding: 100px;
-  text-align: center;
-  /* background: #1abc9c; */
-  /* color: white; */
-  font-size: 50px;
-}
-font {
-  font-size: 200px;
-}
-.font_input {
-  font-size: 75px;
+  color: white;
 }
 </style>

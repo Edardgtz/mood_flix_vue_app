@@ -1,28 +1,18 @@
 <template>
   <div class="titles-index">
-    <h1>Your Movies</h1>
+    <h1 class="header index_header">Your Movies</h1>
       <div v-for="title in titles">
-        <!-- <div class="card mb-3">
-          <img v-bind:src="title.images" v-bind:alt="title.title" />
-          <div class="card-body">
-            <h5 class="card-title">{{ title.title }}</h5>
+        <div class="card " style="width: 75%;">
+          <div class="card-body" >
+            <h1 class="card-title card_title">{{ title.title }}</h1>
+          <img v-bind:src="title.images" v-bind:alt="title.title" class="card-img-top img-fluid">
             <p class="card-title">Rating: {{ title.rating }}<p/>
             <p class="card-title">Plot: {{title.plot}}</p>
             <p class="card-title">Run Time: {{ title.run_time }}</p>
             <p class="card-title">Release Date: {{ title.year }}</p>
             <p class="card-title">Movie Rating: {{ title.movie_rating }}</p>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
           </div>
-        </div> -->
-      <div class="card" style="width: 75%;">
-        <img v-bind:src="title.images" v-bind:alt="title.title" class="card-img-top img-fluid">
-        <div class="card-body">
-          <h1 class="card-title">{{ title.title }}</h1>
-          <p class="card-title">Rating: {{ title.rating }}<p/>
-          <p class="card-title">Plot: {{title.plot}}</p>
-          <p class="card-title">Run Time: {{ title.run_time }}</p>
-          <p class="card-title">Release Date: {{ title.year }}</p>
-          <p class="card-title">Movie Rating: {{ title.movie_rating }}</p>
-          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
         </div>
       </div>
     </div> 
