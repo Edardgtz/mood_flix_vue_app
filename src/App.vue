@@ -46,11 +46,11 @@ p {
   color: white;
   /* background-color: black; */
 }
-.card-img-top {
+/* .card-img-top {
   width: 100%;
   height: 15vw;
   object-fit: cover;
-}
+} */
 
 body {
   background-image: url("../src/assets/steve-johnson-5MTf9XyVVgM-unsplash.jpg");
@@ -95,19 +95,21 @@ h1 {
 
 .header {
   /* padding: 100px; */
-  padding-top: 25px;
-  padding-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 100px;
   text-align: center;
   /* background: #1abc9c; */
   color: white;
   font-size: 50px;
   /* font-family: kust; */
+  letter-spacing: 15px;
 }
-font {
-  font-size: 250px;
+.home_title {
+  font-size: 22vw;
+  color: black;
 }
 .font_input {
-  font-size: 100px;
+  font-size: 50px;
   color: black;
   padding-bottom: 5px;
 }
@@ -129,6 +131,7 @@ textarea {
 ::placeholder {
   color: black;
   font-family: kust;
+  /* font-size: 17px; */
 }
 form {
   border: 5px;
@@ -142,38 +145,7 @@ form {
   font-size: 150px;
   color: black;
 }
-.lds-ripple {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  /* height: 80px; */
-}
-.lds-ripple div {
-  position: absolute;
-  border: 4px solid #fff;
-  opacity: 1;
-  border-radius: 50%;
-  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-}
-.lds-ripple div:nth-child(2) {
-  animation-delay: -0.5s;
-}
-@keyframes lds-ripple {
-  0% {
-    top: 36px;
-    left: 36px;
-    width: 0;
-    height: 0;
-    opacity: 1;
-  }
-  100% {
-    top: 0px;
-    left: 0px;
-    width: 72px;
-    height: 72px;
-    opacity: 0;
-  }
-}
+
 @font-face {
   font-family: "kust";
   src: url("assets/fonts/kust.otf") format("opentype");
@@ -187,5 +159,14 @@ form {
   font-weight: 400;
   line-height: 23px;
   color: white;
+}
+.art_credit {
+  margin-left: 10px;
+  position: relative;
+  float: left;
+  padding-top: 48%;
+  /* font-weight: bold; */
+  font-family: "kust";
+  font-size: 20px;
 }
 </style>

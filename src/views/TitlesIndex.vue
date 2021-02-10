@@ -1,6 +1,7 @@
 <template>
   <div class="titles-index">
     <h1 class="header index_header">Your Movies</h1>
+    <div v-bind:class="{ldsRipple:ldsStatus}"><div></div><div></div></div>
       <div v-for="title in titles">
         <div class="card " style="width: 75%;">
           <div class="card-body" >
@@ -15,10 +16,42 @@
           </div>
         </div>
       </div>
-    </div> 
   </div>
 </template>
-
+<style>
+.ldsRipple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  /* height: 80px; */
+}
+.ldsRipple div {
+  position: absolute;
+  border: 5px solid rgb(0, 0, 2);
+  opacity: 1;
+  border-radius: 60%;
+  animation: ldsRipple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.ldsRipple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes ldsRipple {
+  0% {
+    top: 50px;
+    left: 50px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+  }
+}
+</style>
 <script>
 import axios from "axios";
 export default {
@@ -26,6 +59,7 @@ export default {
     return {
       titles: [],
       mood: "",
+      ldsStatus: true,
     };
   },
   created: function () {
@@ -41,6 +75,7 @@ export default {
         .then((response) => {
           console.log(response.data);
           this.titles = response.data;
+          this.ldsStatus = false;
         });
     },
   },
